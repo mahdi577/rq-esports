@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RQ ESPORTS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--b:#1457ff;--c:#00b3ff;--d:#030b2a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:500 clamp(16px,1.2vw,19px) Rajdhani,system-ui,sans-serif;color:#fff;background:var(--d);min-height:100vh;overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+.stage{position:fixed;inset:0;z-index:-1;background:conic-gradient(from 180deg at 50% -8%,transparent 38%,rgba(0,150,255,.35) 44%,transparent 50%,transparent 56%,rgba(0,150,255,.3) 62%,transparent 68%),radial-gradient(ellipse 90% 70% at 50% 0,#1457ff,#071c75 50%,#030b2a 85%)}
+.stage:after{content:"";position:absolute;inset:auto -50% 0;height:48%;background:linear-gradient(rgba(0,179,255,.28) 1px,transparent 1px) 0 0/100% 46px,linear-gradient(90deg,rgba(0,179,255,.28) 1px,transparent 1px) 0 0/70px 100%;transform:perspective(420px) rotateX(62deg);transform-origin:bottom;-webkit-mask:linear-gradient(transparent,#000);mask:linear-gradient(transparent,#000)}
+header{display:flex;align-items:center;gap:14px;padding:calc(14px + env(safe-area-inset-top)) 5vw 14px}
+.lg{width:54px;height:54px;display:grid;place-items:center;background:#fff;color:var(--b);font:800 22px Orbitron,sans-serif;clip-path:polygon(25% 0,100% 0,75% 100%,0 100%)}
+header b{font:800 clamp(18px,2.4vw,26px) Orbitron,sans-serif;letter-spacing:.08em;display:block}
+header small{color:#9fd0ff;letter-spacing:.3em;text-transform:uppercase}
+header a{margin-left:auto;color:#fff;opacity:.75;text-decoration:none;border:1px solid #fff5;padding:6px 14px;border-radius:99px;font-size:15px}
+main{max-width:1280px;margin:auto;padding:0 5vw 60px}
+.hero{text-align:center;padding:5vh 0 3vh}
+.eb{letter-spacing:.5em;color:#9fd0ff;text-transform:uppercase;font-size:.9em}
+h1{font:800 clamp(38px,9vw,110px) Orbitron,sans-serif;line-height:1.1;background:linear-gradient(#fff,#8cc4ff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 30px #1e7bff)}
+.tg{margin-top:10px;font-size:1.3em}
+.ab{margin:3vh auto 5vh;max-width:860px;padding:26px 30px;background:linear-gradient(135deg,#ffffff24,#ffffff0a);border:1px solid #ffffff40;border-left:5px solid var(--c);border-radius:6px 22px 6px 22px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);line-height:1.55}
+h2{font:800 1.05em Orbitron,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px;color:#8fd0ff}
+.sh{text-align:center;margin:34px 0 22px;font-size:1.25em;color:#fff}
+.sh:before,.sh:after{content:"";display:inline-block;width:8vw;height:2px;background:linear-gradient(90deg,transparent,var(--c));vertical-align:middle;margin:0 14px}
+.sh:after{transform:scaleX(-1)}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,2vw,28px)}
+.g2{display:flex;justify-content:center;gap:clamp(24px,6vw,80px);flex-wrap:wrap}
+.pc{position:relative;display:block;text-align:center;transition:.3s;padding-top:10px;background:linear-gradient(180deg,#ffffff18,transparent 60%);border:1px solid #ffffff30;border-radius:18px 18px 4px 4px;overflow:hidden}
+.pc:after{content:"";position:absolute;left:8%;right:8%;bottom:62px;height:24px;border-radius:50%;background:radial-gradient(#fff,var(--c) 40%,transparent 70%);opacity:.85;filter:blur(2px)}
+.pc:hover{transform:translateY(-8px);box-shadow:0 0 40px #1e7bff99}
+.pc img{position:relative;z-index:1;width:100%;aspect-ratio:2/3;object-fit:contain;filter:drop-shadow(0 14px 18px #0008);transition:.35s}
+.pc:hover img{transform:scale(1.04)}
+.nm{position:relative;z-index:2;display:block;background:#fff;color:#0a3cff;font:800 clamp(14px,1.7vw,22px) Orbitron,sans-serif;padding:9px 6px;clip-path:polygon(5% 0,100% 0,95% 100%,0 100%);letter-spacing:.06em}
+.pc em,.sb em{display:block;font-style:normal;color:#9fd0ff;padding:6px 0 10px;letter-spacing:.15em;text-transform:uppercase;font-size:.85em}
+.sb{text-align:center;transition:.3s}.sb:hover{transform:translateY(-6px)}
+.ic{display:block;width:clamp(86px,12vw,128px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:3px solid #fff;box-shadow:0 0 0 4px var(--b),0 0 30px #1e7bffaa;background:radial-gradient(#3b8cff,#0a2a9a);margin:0 auto 14px}
+.ic img{display:block;width:150%;margin-left:-25%}
+.sb .nm{display:inline-block;padding:6px 24px}
+footer{text-align:center;padding:30px;color:#9fd0ffaa;font-size:.9em}footer a{color:inherit}
+.ov{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:rgba(3,11,42,.55);-webkit-backdrop-filter:blur(14px) brightness(.6);backdrop-filter:blur(14px) brightness(.6);opacity:0;pointer-events:none;transition:.25s}
+.ov.on{opacity:1;pointer-events:auto}
+.md{position:relative;width:min(980px,94vw);max-height:90vh;overflow:auto;padding:26px;background:linear-gradient(160deg,#0d3fd8,#06196b 60%,#041045);border:1px solid #ffffff55;border-radius:22px;box-shadow:0 0 70px #1e7bffaa;transform:scale(.94);transition:.25s}
+.ov.on .md{transform:none}
+.x{position:absolute;top:10px;right:14px;font-size:34px;line-height:1;z-index:3}
+.mg{display:grid;grid-template-columns:minmax(200px,300px) 1fr;gap:26px}
+.mi{text-align:center;background:radial-gradient(ellipse at 50% 100%,#2f8cffaa,transparent 70%)}.mi img{width:100%;aspect-ratio:2/3;object-fit:contain}
+.mi h3{font:800 1.5em Orbitron,sans-serif;color:#fff}.mi p{color:#9fd0ff;letter-spacing:.15em;text-transform:uppercase}
+.md h4{font:800 1em Orbitron,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#8fd0ff;margin:6px 0 10px}
+.ch{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}.ch span{background:#fff;color:#0a3cff;font-weight:700;padding:4px 14px;border-radius:99px}
+.gr{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:22px}
+.c{background:#ffffff14;border:1px solid #ffffff33;border-radius:12px;padding:10px 12px}
+.c span{display:block;font-size:.8em;color:#9fd0ff;text-transform:uppercase;letter-spacing:.08em}.c b{font:800 1.15em Orbitron,sans-serif}
+.lf{max-width:420px;margin:6vh auto;display:grid;gap:14px;padding:28px;background:#ffffff14;border:1px solid #fff4;border-radius:18px}
+label{display:grid;gap:4px;font-size:.9em;color:#bfe0ff}
+input,textarea{width:100%;background:#ffffff1a;border:1px solid #fff5;color:#fff;border-radius:8px;padding:10px;font:inherit;font-size:16px}
+input[readonly]{opacity:.7}
+.bt{background:#fff;color:#0a3cff;font-weight:700;padding:10px 20px;border-radius:99px;text-align:center;text-decoration:none}
+.bt2{border:1px solid #fff6;padding:9px 18px;border-radius:99px;text-decoration:none;color:#fff}
+.tb{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:12px 0;background:#030b2acc;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.tb b{font:800 1.1em Orbitron,sans-serif;margin-right:auto}
+.pn{padding:16px;margin:16px 0;background:#ffffff12;border:1px solid #fff3;border-radius:14px;display:grid;gap:10px}
+.ag{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ag2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:50%;margin:14px auto 0}
+.ag2:has(details[open]){max-width:none}
+details{background:#06146099;border:1px solid #fff3;border-radius:14px;padding:12px;display:grid;gap:10px}
+details[open]{grid-column:1/-1}
+summary{display:flex;align-items:center;gap:10px;cursor:pointer}
+summary img{width:56px;height:56px;object-fit:cover;object-position:top;border-radius:50%;background:#2d7bff}
+summary i{display:block;font-style:normal;font-size:.8em;color:#9fd0ff}
+.rw{display:grid;grid-template-columns:1fr 1fr auto;gap:6px;margin-bottom:6px}
+.rw button,.ad{background:#ffffff22;border-radius:8px;padding:6px 12px}
+.er{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+#ms{color:#ffd0d0}
+@media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.ag{grid-template-columns:repeat(2,minmax(0,1fr))}.ag2{max-width:100%}.mg,.er{grid-template-columns:1fr}.mi img{max-height:46vh}}
+@media(max-width:480px){.sh:before,.sh:after{display:none}.md{padding:18px}.ag,.ag2{grid-template-columns:1fr}}
+</style></head><body>
+<div class="stage"></div>
+<header><div class="lg">RQ</div><div><b id="hn">RQ ESPORTS</b><small id="hf">IronIq ESPORTS</small></div><a id="al" href="#admin">Admin</a></header>
+<main id="app"></main>
+<footer id="ft"></footer>
+<div class="ov" id="ov"><div class="md" id="md"></div></div>
+<script type="module">
+/* ====== 1) PASTE YOUR FIREBASE SETTINGS HERE (see the guide, Part B) ====== */
+const FB={apiKey:"",authDomain:"",projectId:"",appId:""};
+/* ========================================================================= */
+const EMAIL="bolt@rqesports.app",V="10.14.1",G="https://www.gstatic.com/firebasejs/"+V+"/";
+const CS=[["Total Playtime","1,284 h 40 m"],["Practice Matches","3,420"],["Total Kills","9,876"],["Total Damage","2,314,500"],["K/D Ratio","4.82"],["Avg Damage / Match","676"],["Headshot Rate","38%"],["Win Rate","17%"],["Chicken Dinners","581"],["Assists","2,140"],["Revives","460"],["Longest Kill","412 m"],["Avg Survival Time","21 m 10 s"],["MVP Awards","214"],["Tier","Conqueror"],["Main Weapon","M416 · AWM"]];
+const DS=[["Playtime Today","3 h 25 m"],["Practice Matches","9"],["Kills","31"],["Damage Dealt","6,240"],["K/D Ratio","4.10"],["Headshots","11"],["Assists","6"],["Revives","2"],["Avg Survival Time","19 m 40 s"]];
+const P=(name,role,i)=>({name,role,img:i+".webp",stamp:"",daily:DS.map(x=>[...x]),career:CS.map(x=>[...x])});
+const DEF={team:{name:"RQ ESPORTS",short:"RQ",full:"IronIq ESPORTS",tag:"Strength to endure. Intelligence to win.",
+about:"We are IronIq ESPORTS, known as RQ. Iron is our discipline: unbreakable, relentless, forged in the hours nobody sees. IQ is our edge: reads, rotations and decisions made faster than the circle closes.\n\nWe recruit players who think before they fire and never fold when the zone collapses. Our vision is to rise from the practice lobby to the world stage, to build a roster of champions, a culture of respect and a standard that other teams measure themselves against.\n\nIf you bring hunger, humility and a sharp mind, you belong here. Welcome to RQ."},
+players:[P("BOLT","Captain · IGL",1),P("KEED","Assaulter",2),P("REWS","Fragger",3),P("FDSD","Support",4),P("Yeieoe","Substitute · Sniper",5),P("JJSLWOCxx","Substitute · Scout",6)]};
+const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let D=structuredClone(DEF),U=null,fb=null,auth=null,db=null,admin=false,first=true;
+const cells=a=>a.map(r=>`<div class="c"><span>${esc(r[0])}</span><b>${esc(r[1])}</b></div>`).join("");
+const pimg=p=>`<img src="${esc(p.img)}" alt="${esc(p.name)}">`;
+function head(){const t=D.team;document.title=t.name;$("hn").textContent=t.name;$("hf").textContent=t.full;$("ft").innerHTML=`© ${new Date().getFullYear()} ${esc(t.name)} · ${esc(t.full)}`}
+function pub(){admin=false;head();const t=D.team,pl=D.players;$("al").style.display="";
+$("app").innerHTML=`<section class="hero"><p class="eb">${esc(t.full)}</p><h1>${esc(t.name)}</h1><p class="tg">${esc(t.tag)}</p></section>
+<section class="ab"><h2>Our Identity</h2><p>${esc(t.about).replace(/\n\n/g,"<br><br>")}</p></section>
+<h2 class="sh">Starting Four</h2><div class="g4">${pl.slice(0,4).map((p,i)=>`<button class="pc" data-i="${i}">${pimg(p)}<span class="nm">${esc(p.name)}</span><em>${esc(p.role)}</em></button>`).join("")}</div>
+<h2 class="sh">Substitutes</h2><div class="g2">${pl.slice(4).map((p,i)=>`<button class="sb" data-i="${i+4}"><span class="ic">${pimg(p)}</span><span class="nm">${esc(p.name)}</span><em>${esc(p.role)}</em></button>`).join("")}</div>`}
+function openM(i){const p=D.players[i],d=new Date(p.stamp||Date.now()),f=o=>d.toLocaleString("en-US",o);
+$("md").innerHTML=`<button class="x" aria-label="Close">×</button><div class="mg"><div class="mi">${pimg(p)}<h3>${esc(p.name)}</h3><p>${esc(p.role)}</p></div><div><h4>Daily Stats</h4><div class="ch"><span>${f({weekday:"long"})}</span><span>${f({day:"numeric",month:"short",year:"numeric"})}</span><span>${f({hour:"numeric",minute:"2-digit"})}</span></div><div class="gr">${cells(p.daily)}</div><h4>Career Stats</h4><div class="gr">${cells(p.career)}</div></div></div>`;
+$("ov").classList.add("on");document.body.style.overflow="hidden"}
+const closeM=()=>{$("ov").classList.remove("on");document.body.style.overflow=""};
+$("ov").onclick=e=>{if(e.target===$("ov")||e.target.closest(".x"))closeM()};
+addEventListener("keydown",e=>e.key==="Escape"&&closeM());
+/* ---------- admin ---------- */
+const rows=(a,i,k)=>a.map((r,j)=>`<div class="rw"><input data-k="players.${i}.${k}.${j}.0" value="${esc(r[0])}" aria-label="Label"><input data-k="players.${i}.${k}.${j}.1" value="${esc(r[1])}" aria-label="Value"><button data-del="${i}.${k}.${j}" aria-label="Remove">✕</button></div>`).join("")+`<button class="ad" data-add="${i}.${k}">+ Add stat</button>`;
+const ed=(p,i)=>`<details data-n="${i}"><summary>${pimg(p)}<span><b>${esc(p.name)}</b><i>${i<4?"Starter":"Substitute"} ${i+1}</i></span></summary>
+<label>Player name<input data-k="players.${i}.name" value="${esc(p.name)}"></label><label>Role / title<input data-k="players.${i}.role" value="${esc(p.role)}"></label>
+<label>Player image (transparent PNG works best)<input type="file" accept="image/*" data-up="${i}"></label>
+<label>Daily stats day, date &amp; time<input type="datetime-local" data-k="players.${i}.stamp" value="${esc(p.stamp)}"></label><button class="ad" data-now="${i}">Set to right now</button>
+<div class="er"><div><h4>Daily stats</h4>${rows(p.daily,i,"daily")}</div><div><h4>Career stats</h4>${rows(p.career,i,"career")}</div></div></details>`;
+function adm(){admin=true;closeM();$("al").style.display="none";head();
+if(!U){$("app").innerHTML=`<form class="lf" id="lf"><h2>Admin Login</h2><label>Username<input value="BOLT" readonly></label><label>Password<input id="pw" type="password" autocomplete="current-password" required></label><button class="bt">Log in</button><p id="ms"></p><a href="#" style="color:#9fd0ff">← Back to site</a></form>`;
+$("lf").onsubmit=async e=>{e.preventDefault();if(!auth)return $("ms").textContent="Backend not connected yet. Finish Part B of the guide.";try{await fb.login(auth,EMAIL,$("pw").value)}catch{$("ms").textContent="Wrong username or password."}};return}
+const t=D.team,o=[...document.querySelectorAll("details[open]")].map(d=>d.dataset.n);
+$("app").innerHTML=`<div class="tb"><b>Admin Panel</b><span id="st"></span><button class="bt" id="sv">Save changes</button><a class="bt2" href="#">View site</a><button class="bt2" id="lo">Log out</button></div>
+<div class="pn"><h2>Team</h2><label>Team name<input data-k="team.name" value="${esc(t.name)}"></label><label>Short name<input data-k="team.short" value="${esc(t.short)}"></label><label>Full name<input data-k="team.full" value="${esc(t.full)}"></label><label>Tagline<input data-k="team.tag" value="${esc(t.tag)}"></label><label>Team identity statement<textarea rows="9" data-k="team.about">${esc(t.about)}</textarea></label></div>
+<h2>Starting players</h2><div class="ag">${D.players.slice(0,4).map((p,i)=>ed(p,i)).join("")}</div>
+<h2 style="margin-top:20px">Substitutes</h2><div class="ag2">${D.players.slice(4).map((p,i)=>ed(p,i+4)).join("")}</div>`;
+o.forEach(n=>document.querySelector(`details[data-n="${n}"]`)?.setAttribute("open",""))}
+const setP=(o,p,v)=>{const k=p.split("."),l=k.pop();k.reduce((a,b)=>a[b],o)[l]=v};
+const st=m=>{const e=$("st");if(e)e.textContent=m};
+$("app").addEventListener("input",e=>{const k=e.target.dataset.k;if(k)setP(D,k,e.target.value)});
+$("app").addEventListener("change",e=>{const i=e.target.dataset.up;if(i==null||!e.target.files[0])return;
+const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{let h=800,u;do{const c=document.createElement("canvas");c.height=h;c.width=Math.round(h*im.width/im.height);c.getContext("2d").drawImage(im,0,0,c.width,c.height);u=c.toDataURL("image/webp",.82);h*=.8}while(u.length>120000&&h>250);D.players[i].img=u;adm();st("Image ready - press Save changes")};im.src=r.result};r.readAsDataURL(e.target.files[0])});
+$("app").addEventListener("click",async e=>{const t=e.target.closest("[data-i],[data-add],[data-del],[data-now],#sv,#lo");if(!t)return;
+if(!admin){if(t.dataset.i!=null)openM(+t.dataset.i);return}
+const d=t.dataset;
+if(d.add){const[i,k]=d.add.split(".");D.players[i][k].push(["New stat","0"]);adm()}
+else if(d.del){const[i,k,j]=d.del.split(".");D.players[i][k].splice(j,1);adm()}
+else if(d.now!=null){D.players[d.now].stamp=new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,16);adm()}
+else if(t.id==="lo")fb.out(auth)
+else if(t.id==="sv"){st("Saving…");try{await fb.set(fb.doc(db,"site","main"),JSON.parse(JSON.stringify(D)));st("Saved ✓ live for everyone")}catch(x){st("Save failed: "+(x.code||x.message))}}});
+const route=()=>location.hash==="#admin"?adm():pub();
+addEventListener("hashchange",route);route();
+(async()=>{if(!FB.apiKey)return;try{
+const[a,b,c]=await Promise.all([import(G+"firebase-app.js"),import(G+"firebase-auth.js"),import(G+"firebase-firestore.js")]);
+const app=a.initializeApp(FB);auth=b.getAuth(app);db=c.getFirestore(app);
+fb={login:b.signInWithEmailAndPassword,out:b.signOut,doc:c.doc,set:c.setDoc};
+b.onAuthStateChanged(auth,u=>{U=u;if(admin)route()});
+c.onSnapshot(c.doc(db,"site","main"),s=>{if(s.exists()&&(first||!(admin&&U))){D={...structuredClone(DEF),...s.data()};route()}first=false})}catch(e){console.warn("Firebase unavailable",e)}})();
+</script></body></html>
